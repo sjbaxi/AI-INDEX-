@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSE AI Index — Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page-bg:#F6F7F9; --panel:#FFFFFF; --panel-2:#F1F3F6; --line:#DDE1E7;
+    --amber:#6D4FC2; --amber-soft:#F1EDFB;  /* violet accent for the AI index, distinct from logistics amber */
+    --green:#1B8A5A; --green-soft:#E9F7F0;
+    --red:#C7364A; --red-soft:#FBEAED;
+    --text:#151A23; --muted:#5B6472;
+    --badge-high:#1B8A5A; --badge-high-bg:#E9F7F0;
+    --badge-borderline:#B4650C; --badge-borderline-bg:#FDF2E3;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--page-bg); color:var(--text);
+    font-family:'Inter', sans-serif; min-height:100vh; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:22px 14px 44px;}
+
+  .eyebrow{font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:.16em; color:var(--amber); text-transform:uppercase;}
+  h1{font-family:'Oswald', sans-serif; font-weight:700; font-size:clamp(20px,5vw,32px); margin:4px 0 6px; text-transform:uppercase; color:var(--text);}
+  .subhead{color:var(--muted); font-size:12.5px; max-width:640px; line-height:1.55; margin-bottom:14px;}
+
+  /* Index headline banner */
+  .index-banner{
+    border:1px solid var(--line); background:var(--panel); border-radius:8px;
+    padding:18px 20px; display:flex; align-items:flex-end; flex-wrap:wrap; gap:14px 28px;
+    box-shadow:0 1px 2px rgba(21,26,35,0.05); margin-bottom:16px;
+  }
+  .index-value-block{display:flex; flex-direction:column; gap:2px;}
+  .index-label{font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.1em; color:var(--muted); text-transform:uppercase;}
+  .index-value{font-family:'Oswald',sans-serif; font-size:clamp(30px,7vw,44px); font-weight:700; line-height:1;}
+  .index-change{
+    font-family:'Space Mono',monospace; font-size:14px; font-weight:700;
+    padding:4px 10px; border-radius:5px; white-space:nowrap;
+  }
+  .index-change.up{color:var(--green); background:var(--green-soft);}
+  .index-change.down{color:var(--red); background:var(--red-soft);}
+  .index-change.flat{color:var(--muted); background:var(--panel-2);}
+  .index-meta{font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); line-height:1.6; margin-left:auto;}
+  .index-meta b{color:var(--text);}
+
+  .caveat{
+    border:1px solid var(--badge-borderline-bg); background:var(--badge-borderline-bg);
+    border-radius:6px; padding:10px 14px; font-size:11.5px; color:#7a4a08; line-height:1.5;
+    margin-bottom:16px;
+  }
+  .caveat b{color:#151A23;}
+
+  .toolbar{display:flex; justify-content:space-between; align-items:center; margin:4px 2px 8px; flex-wrap:wrap; gap:6px;}
+  .toolbar .count{font-family:'Space Mono',monospace; font-size:11px; color:var(--muted);}
+  .status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--muted);margin-right:5px;}
+  .status-dot.live{background:var(--green);} .status-dot.stale{background:var(--amber);}
+
+  /* Compact table */
+  .board{border:1px solid var(--line); background:var(--panel); border-radius:8px; overflow:hidden; box-shadow:0 1px 2px rgba(21,26,35,0.05);}
+  .board-header, .row-main{
+    display:grid;
+    grid-template-columns: 26px 1.7fr 78px 88px 66px 100px 84px;
+    align-items:center; column-gap:6px; padding:0 12px;
+  }
+  .board-header{
+    background:var(--panel-2); font-family:'Space Mono', monospace; font-size:10px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--muted); height:30px;
+  }
+  .row{border-top:1px solid var(--line);}
+  .row:nth-child(even){background:#FBFBFC;}
+  .row:hover{background:var(--panel-2);}
+  .row-main{height:38px; font-family:'Space Mono', monospace; font-size:12.5px;}
+  .idx{color:var(--amber); font-size:10.5px; opacity:.8;}
+  .name-cell{overflow:hidden; white-space:nowrap;}
+  .name-cell .nm{font-family:'Oswald',sans-serif; font-size:12.5px; text-transform:uppercase; letter-spacing:.01em; color:var(--text);}
+  .name-cell .sym{font-size:9px; color:var(--muted); margin-left:5px; letter-spacing:.04em;}
+  .segment{font-size:10px; color:var(--muted); overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+  .price{text-align:right; color:var(--text); font-weight:700;}
+  .chg{text-align:right; font-weight:700;}
+  .chg.up{color:var(--green);} .chg.down{color:var(--red);} .chg.flat{color:var(--muted);}
+  .mcap{text-align:right; color:var(--muted);}
+  .badge{
+    font-family:'Space Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.04em;
+    padding:2px 6px; border-radius:4px; justify-self:end; white-space:nowrap;
+  }
+  .badge.high{color:var(--badge-high); background:var(--badge-high-bg);}
+  .badge.borderline{color:var(--badge-borderline); background:var(--badge-borderline-bg);}
+  .note-row{
+    padding:0 12px 8px 48px; font-size:10.5px; color:var(--muted); line-height:1.5;
+    font-style:italic;
+  }
+
+  footer{margin-top:16px; font-size:10.5px; color:var(--muted); line-height:1.6; border-top:1px solid var(--line); padding-top:12px;}
+  footer a{color:var(--amber); text-decoration:none; font-weight:600;}
+  .errbox{margin-top:10px; font-family:'Space Mono',monospace; font-size:11.5px; color:var(--red);}
+
+  @media (max-width:760px){
+    .board-header, .row-main{grid-template-columns: 20px 1.5fr 70px 78px 60px; padding:0 10px;}
+    .segment, .mcap{display:none;}
+    .index-meta{margin-left:0;}
+    .note-row{padding-left:34px;}
+  }
+  @media (max-width:440px){
+    .board-header, .row-main{grid-template-columns: 18px 1fr 66px 56px; padding:0 8px;}
+    .chg{display:none;}
+    .name-cell .sym{display:none;}
+    .index-banner{padding:14px 16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Consignment Note · Sector Index</div>
+  <h1>NSE AI Index</h1>
+  <p class="subhead">Market-cap-weighted index of NSE-listed companies where AI is the core business — 100% AI, or AI-specific business lines exceeding half of revenue.</p>
+
+  <div class="index-banner">
+    <div class="index-value-block">
+      <span class="index-label">Index Value</span>
+      <span class="index-value" id="indexValue">—</span>
+    </div>
+    <span class="index-change flat" id="indexChange">—</span>
+    <div class="index-meta">
+      Base <b id="baseDate">—</b> = <b id="baseValue">1000.00</b><br>
+      Updated <b id="lastUpdated">—</b>
+    </div>
+  </div>
+
+  <div class="caveat">
+    <b>Screening caveat:</b> unlike an industry sector code, "AI company" isn't an official NSE classification — this list is judgment-based, drawn from public disclosures and press coverage of revenue mix. Constituents marked <span class="badge borderline" style="display:inline-block;">borderline</span> are close to the 50% threshold, not a clean majority. See each company's note below, and <code>scripts/companies.py</code> to adjust.
+  </div>
+
+  <div class="toolbar">
+    <span class="count"><span class="status-dot" id="statusDot"></span><span id="statusText">Loading…</span></span>
+    <span class="count">Sorted by market cap, high to low</span>
+  </div>
+
+  <div class="board">
+    <div class="board-header">
+      <div>#</div><div>Company</div><div class="segment">Segment</div>
+      <div class="price" style="text-align:right;">LTP</div>
+      <div class="chg" style="text-align:right;">Chg%</div>
+      <div class="mcap" style="text-align:right;">Mkt Cap (₹Cr)</div>
+      <div style="text-align:right;">Screen</div>
+    </div>
+    <div id="rows"></div>
+  </div>
+  <div class="errbox" id="errbox" style="display:none;"></div>
+
+  <footer>
+    Index is a market-cap-weighted composite (base = 1 Apr 2023, base value 1000): index = (Σ price × locked share count) ÷ divisor. Most constituents IPO'd after the base date, so their base price is a first-trade-day proxy — see <code>base.json</code>'s <code>baseIsProxy</code> field. Prices refresh every 15 min during NSE hours via scheduled GitHub Actions, whether or not anyone is viewing this page. Reference only, not a licensed exchange index or investment advice — verify at <a href="https://www.nseindia.com" target="_blank" rel="noopener">nseindia.com</a>.
+  </footer>
+
+</div>
+
+<script>
+function fmt(n, d=2){
+  if(n == null || isNaN(n)) return '—';
+  return Number(n).toLocaleString('en-IN', {minimumFractionDigits:d, maximumFractionDigits:d});
+}
+
+async function load(){
+  try{
+    const res = await fetch('./data.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('data.json not found (has the workflow run yet?)');
+    const data = await res.json();
+    const idx = data.index || {};
+
+    document.getElementById('indexValue').textContent = idx.value != null ? fmt(idx.value) : '—';
+    document.getElementById('baseDate').textContent = idx.baseDate || '—';
+    document.getElementById('baseValue').textContent = idx.baseValue != null ? fmt(idx.baseValue) : '1000.00';
+    document.getElementById('lastUpdated').textContent = new Date(data.generatedAt).toLocaleString('en-IN', {dateStyle:'medium', timeStyle:'short'});
+
+    const chgEl = document.getElementById('indexChange');
+    if(idx.changePct == null){
+      chgEl.textContent = '—'; chgEl.className = 'index-change flat';
+    } else {
+      const arrow = idx.changePct > 0 ? '▲' : idx.changePct < 0 ? '▼' : '▬';
+      chgEl.textContent = `${arrow} ${idx.changePct >= 0 ? '+' : ''}${idx.changePct.toFixed(2)}%`;
+      chgEl.className = 'index-change ' + (idx.changePct > 0 ? 'up' : idx.changePct < 0 ? 'down' : 'flat');
+    }
+
+    const dot = document.getElementById('statusDot');
+    const statusText = document.getElementById('statusText');
+    const failed = data.failedCount ?? 0;
+    if(failed === 0){ dot.className = 'status-dot live'; statusText.textContent = 'Index current'; }
+    else { dot.className = 'status-dot stale'; statusText.textContent = `${failed} symbol(s) failed on last run`; }
+
+    document.getElementById('rows').innerHTML = data.companies.map((c,i)=>{
+      const chgClass = c.changePct > 0 ? 'up' : c.changePct < 0 ? 'down' : 'flat';
+      const chgText = c.changePct == null ? '—' : (c.changePct >= 0 ? '+' : '') + c.changePct.toFixed(2) + '%';
+      const confClass = c.confidence === 'high' ? 'high' : 'borderline';
+      const confLabel = c.confidence === 'high' ? 'Pure-play' : 'Borderline';
+      return `
+        <div class="row">
+          <div class="row-main">
+            <div class="idx">${i+1}</div>
+            <div class="name-cell"><span class="nm">${c.name}</span><span class="sym">${c.symbol}</span></div>
+            <div class="segment">${c.segment}</div>
+            <div class="price" style="text-align:right;">${c.price != null ? fmt(c.price) : 'n/a'}</div>
+            <div class="chg ${chgClass}" style="text-align:right;">${chgText}</div>
+            <div class="mcap" style="text-align:right;">${c.marketCapCr != null ? fmt(c.marketCapCr, 0) : 'n/a'}</div>
+            <div class="badge ${confClass}">${confLabel}</div>
+          </div>
+          <div class="note-row">${c.note || ''}</div>
+        </div>`;
+    }).join('');
+
+  } catch(err){
+    document.getElementById('statusDot').className = 'status-dot stale';
+    document.getElementById('statusText').textContent = 'Could not load data.json';
+    const box = document.getElementById('errbox');
+    box.style.display = 'block';
+    box.textContent = 'Error: ' + err.message;
+  }
+}
+
+load();
+</script>
+</body>
+</html>

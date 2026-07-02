@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-07-01T00:00:00+00:00",
+  "index": {
+    "baseDate": "2023-04-01",
+    "baseValue": 1000.0,
+    "value": null,
+    "prevValue": null,
+    "changePct": null
+  },
+  "companyCount": 4,
+  "failedCount": 4,
+  "companies": [
+    { "symbol": "FRACTAL",     "name": "Fractal Analytics",           "segment": "AI / Analytics",           "confidence": "high",       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing.", "price": null, "prevClose": null, "changePct": null, "marketCapCr": null, "status": "pending base + first run" },
+    { "symbol": "LATENTVIEW",  "name": "Latent View Analytics",       "segment": "AI / Data Analytics",      "confidence": "borderline", "note": "Roughly half of revenue from AI projects per company commentary.", "price": null, "prevClose": null, "changePct": null, "marketCapCr": null, "status": "pending base + first run" },
+    { "symbol": "HAPPSTMNDS",  "name": "Happiest Minds Technologies", "segment": "AI-first IT Services",     "confidence": "borderline", "note": "~97% digital/cloud/AI-driven revenue, bundled not AI-only.", "price": null, "prevClose": null, "changePct": null, "marketCapCr": null, "status": "pending base + first run" },
+    { "symbol": "NETWEB",      "name": "Netweb Technologies",         "segment": "AI Infrastructure / HPC",  "confidence": "borderline", "note": "AI-systems product segment ~43% of revenue; broader AI+HPC+cloud framing exceeds 50%.", "price": null, "prevClose": null, "changePct": null, "marketCapCr": null, "status": "pending base + first run" }
+  ]
+}
