@@ -1,0 +1,53 @@
+{
+  "baseDate": "2023-04-01",
+  "baseIndexValue": 1000.0,
+  "baseTotalMarketCap": 379341284711.2,
+  "divisor": 379341284.7112,
+  "establishedAt": "2026-07-02T05:29:03.204178+00:00",
+  "companies": [
+    {
+      "symbol": "FRACTAL",
+      "name": "Fractal Analytics",
+      "segment": "AI / Analytics",
+      "confidence": "high",
+      "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
+      "basePrice": 847.15,
+      "baseDateUsed": "2026-02-16",
+      "baseIsProxy": true,
+      "shares": 171965112.0
+    },
+    {
+      "symbol": "LATENTVIEW",
+      "name": "Latent View Analytics",
+      "segment": "AI / Data Analytics",
+      "confidence": "borderline",
+      "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
+      "basePrice": 321.1,
+      "baseDateUsed": "2023-03-31",
+      "baseIsProxy": false,
+      "shares": 206924980.0
+    },
+    {
+      "symbol": "HAPPSTMNDS",
+      "name": "Happiest Minds Technologies",
+      "segment": "AI-first IT Services",
+      "confidence": "borderline",
+      "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
+      "basePrice": 767.85,
+      "baseDateUsed": "2023-03-31",
+      "baseIsProxy": false,
+      "shares": 150261936.0
+    },
+    {
+      "symbol": "NETWEB",
+      "name": "Netweb Technologies",
+      "segment": "AI Infrastructure / HPC",
+      "confidence": "borderline",
+      "note": "Manufactures AI/HPC computing systems; often called India's only listed 'AI infrastructure pure-play', but the company's own AI-systems product segment was reported at ~43% of revenue (up from 15%) -- just under a clean majority by that narrow measure, though broader AI+HPC+cloud infra framing would exceed 50%.",
+      "basePrice": 910.4,
+      "baseDateUsed": "2023-07-27",
+      "baseIsProxy": true,
+      "shares": 56940687.0
+    }
+  ]
+}
