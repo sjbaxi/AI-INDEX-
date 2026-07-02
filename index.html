@@ -1,4 +1,4 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -165,7 +165,7 @@ function fmt(n, d=2){
 
 async function load(){
   try{
-    const res = await fetch('./data.json', {cache:'no-store'});
+    const res = await fetch('./data.json?t=' + Date.now(), {cache:'no-store'});
     if(!res.ok) throw new Error('data.json not found (has the workflow run yet?)');
     const data = await res.json();
     const idx = data.index || {};
@@ -220,6 +220,7 @@ async function load(){
 }
 
 load();
+setInterval(load, 60000); // re-fetch data.json every minute, no manual refresh needed
 </script>
 </body>
 </html>
