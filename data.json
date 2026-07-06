@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-06T07:15:26.226604+00:00",
+  "generatedAt": "2026-07-06T11:45:48.124626+00:00",
   "index": {
     "baseDate": "2023-04-01",
     "baseValue": 1000.0,
-    "value": 1343.73,
+    "value": 1350.98,
     "prevValue": 1360.49,
-    "changePct": -1.23
+    "changePct": -0.7
   },
   "companyCount": 4,
   "failedCount": 0,
@@ -16,10 +16,10 @@
       "segment": "AI Infrastructure / HPC",
       "confidence": "borderline",
       "note": "Manufactures AI/HPC computing systems; often called India's only listed 'AI infrastructure pure-play', but the company's own AI-systems product segment was reported at ~43% of revenue (up from 15%) -- just under a clean majority by that narrow measure, though broader AI+HPC+cloud infra framing would exceed 50%.",
-      "price": 4405.9,
+      "price": 4411.5,
       "prevClose": 4441.0,
-      "changePct": -0.79,
-      "marketCapCr": 25087.5,
+      "changePct": -0.66,
+      "marketCapCr": 25119.4,
       "status": "ok"
     },
     {
@@ -28,10 +28,10 @@
       "segment": "AI / Analytics",
       "confidence": "high",
       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
-      "price": 862.2,
+      "price": 871.9,
       "prevClose": 885.0,
-      "changePct": -2.58,
-      "marketCapCr": 14826.8,
+      "changePct": -1.48,
+      "marketCapCr": 14993.6,
       "status": "ok"
     },
     {
@@ -40,10 +40,10 @@
       "segment": "AI / Data Analytics",
       "confidence": "borderline",
       "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
-      "price": 282.2,
+      "price": 285.9,
       "prevClose": 282.0,
-      "changePct": 0.07,
-      "marketCapCr": 5839.4,
+      "changePct": 1.38,
+      "marketCapCr": 5916.0,
       "status": "ok"
     },
     {
