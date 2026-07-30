@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-29T11:10:22.827866+00:00",
+  "generatedAt": "2026-07-30T05:42:53.519547+00:00",
   "index": {
     "baseDate": "2023-04-01",
     "baseValue": 1000.0,
-    "value": 1337.57,
-    "prevValue": 1351.66,
-    "changePct": -1.04
+    "value": 1320.24,
+    "prevValue": 1337.05,
+    "changePct": -1.26
   },
   "companyCount": 4,
   "failedCount": 0,
@@ -16,10 +16,10 @@
       "segment": "AI Infrastructure / HPC",
       "confidence": "borderline",
       "note": "Manufactures AI/HPC computing systems; often called India's only listed 'AI infrastructure pure-play', but the company's own AI-systems product segment was reported at ~43% of revenue (up from 15%) -- just under a clean majority by that narrow measure, though broader AI+HPC+cloud infra framing would exceed 50%.",
-      "price": 4364.1,
-      "prevClose": 4465.0,
-      "changePct": -2.26,
-      "marketCapCr": 24849.5,
+      "price": 4254.9,
+      "prevClose": 4364.1,
+      "changePct": -2.5,
+      "marketCapCr": 24227.7,
       "status": "ok"
     },
     {
@@ -28,10 +28,10 @@
       "segment": "AI / Analytics",
       "confidence": "high",
       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
-      "price": 786.4,
-      "prevClose": 795.2,
-      "changePct": -1.11,
-      "marketCapCr": 13523.3,
+      "price": 786.55,
+      "prevClose": 786.0,
+      "changePct": 0.07,
+      "marketCapCr": 13525.9,
       "status": "ok"
     },
     {
@@ -40,10 +40,10 @@
       "segment": "AI / Data Analytics",
       "confidence": "borderline",
       "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
-      "price": 317.6,
-      "prevClose": 312.05,
-      "changePct": 1.78,
-      "marketCapCr": 6571.9,
+      "price": 314.05,
+      "prevClose": 317.6,
+      "changePct": -1.12,
+      "marketCapCr": 6498.5,
       "status": "ok"
     },
     {
@@ -52,10 +52,10 @@
       "segment": "AI-first IT Services",
       "confidence": "borderline",
       "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
-      "price": 385.65,
-      "prevClose": 380.55,
-      "changePct": 1.34,
-      "marketCapCr": 5794.9,
+      "price": 388.0,
+      "prevClose": 384.8,
+      "changePct": 0.83,
+      "marketCapCr": 5830.2,
       "status": "ok"
     }
   ]
