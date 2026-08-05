@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-04T11:10:04.775067+00:00",
+  "generatedAt": "2026-08-05T05:47:23.670423+00:00",
   "index": {
     "baseDate": "2023-04-01",
     "baseValue": 1000.0,
-    "value": 1392.8,
-    "prevValue": 1365.86,
-    "changePct": 1.97
+    "value": 1408.99,
+    "prevValue": 1393.06,
+    "changePct": 1.14
   },
   "companyCount": 4,
   "failedCount": 0,
@@ -16,10 +16,10 @@
       "segment": "AI Infrastructure / HPC",
       "confidence": "borderline",
       "note": "Manufactures AI/HPC computing systems; often called India's only listed 'AI infrastructure pure-play', but the company's own AI-systems product segment was reported at ~43% of revenue (up from 15%) -- just under a clean majority by that narrow measure, though broader AI+HPC+cloud infra framing would exceed 50%.",
-      "price": 4762.2,
-      "prevClose": 4575.0,
-      "changePct": 4.09,
-      "marketCapCr": 27116.3,
+      "price": 4828.4,
+      "prevClose": 4762.2,
+      "changePct": 1.39,
+      "marketCapCr": 27493.2,
       "status": "ok"
     },
     {
@@ -28,22 +28,10 @@
       "segment": "AI / Analytics",
       "confidence": "high",
       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
-      "price": 797.8,
-      "prevClose": 803.7,
-      "changePct": -0.73,
-      "marketCapCr": 13719.4,
-      "status": "ok"
-    },
-    {
-      "symbol": "LATENTVIEW",
-      "name": "Latent View Analytics",
-      "segment": "AI / Data Analytics",
-      "confidence": "borderline",
-      "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
-      "price": 298.05,
-      "prevClose": 298.25,
-      "changePct": -0.07,
-      "marketCapCr": 6167.4,
+      "price": 797.1,
+      "prevClose": 798.5,
+      "changePct": -0.18,
+      "marketCapCr": 13707.3,
       "status": "ok"
     },
     {
@@ -52,10 +40,22 @@
       "segment": "AI-first IT Services",
       "confidence": "borderline",
       "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
-      "price": 388.1,
-      "prevClose": 384.0,
-      "changePct": 1.07,
-      "marketCapCr": 5831.7,
+      "price": 407.7,
+      "prevClose": 387.95,
+      "changePct": 5.09,
+      "marketCapCr": 6126.2,
+      "status": "ok"
+    },
+    {
+      "symbol": "LATENTVIEW",
+      "name": "Latent View Analytics",
+      "segment": "AI / Data Analytics",
+      "confidence": "borderline",
+      "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
+      "price": 295.85,
+      "prevClose": 298.05,
+      "changePct": -0.74,
+      "marketCapCr": 6121.9,
       "status": "ok"
     }
   ]
