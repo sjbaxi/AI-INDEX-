@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-21T08:42:15.479670+00:00",
+  "generatedAt": "2026-08-21T09:20:24.437056+00:00",
   "index": {
     "baseDate": "2023-04-01",
     "baseValue": 1000.0,
-    "value": 1554.39,
+    "value": 1552.95,
     "prevValue": 1521.13,
-    "changePct": 2.19
+    "changePct": 2.09
   },
   "companyCount": 4,
   "failedCount": 0,
@@ -16,10 +16,10 @@
       "segment": "AI Infrastructure / HPC",
       "confidence": "borderline",
       "note": "Manufactures AI/HPC computing systems; often called India's only listed 'AI infrastructure pure-play', but the company's own AI-systems product segment was reported at ~43% of revenue (up from 15%) -- just under a clean majority by that narrow measure, though broader AI+HPC+cloud infra framing would exceed 50%.",
-      "price": 5621.1,
+      "price": 5612.0,
       "prevClose": 5419.8,
-      "changePct": 3.71,
-      "marketCapCr": 32006.9,
+      "changePct": 3.55,
+      "marketCapCr": 31955.1,
       "status": "ok"
     },
     {
@@ -28,10 +28,10 @@
       "segment": "AI / Analytics",
       "confidence": "high",
       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
-      "price": 847.8,
+      "price": 847.35,
       "prevClose": 859.6,
-      "changePct": -1.37,
-      "marketCapCr": 14579.2,
+      "changePct": -1.43,
+      "marketCapCr": 14571.5,
       "status": "ok"
     },
     {
@@ -40,10 +40,10 @@
       "segment": "AI-first IT Services",
       "confidence": "borderline",
       "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
-      "price": 439.3,
+      "price": 440.1,
       "prevClose": 414.6,
-      "changePct": 5.96,
-      "marketCapCr": 6601.0,
+      "changePct": 6.15,
+      "marketCapCr": 6613.0,
       "status": "ok"
     },
     {
@@ -52,10 +52,10 @@
       "segment": "AI / Data Analytics",
       "confidence": "borderline",
       "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
-      "price": 279.2,
+      "price": 278.85,
       "prevClose": 281.75,
-      "changePct": -0.91,
-      "marketCapCr": 5777.3,
+      "changePct": -1.03,
+      "marketCapCr": 5770.1,
       "status": "ok"
     }
   ]
