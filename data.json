@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-25T07:01:06.546324+00:00",
+  "generatedAt": "2026-08-25T07:58:37.137008+00:00",
   "index": {
     "baseDate": "2023-04-01",
     "baseValue": 1000.0,
-    "value": 1479.64,
+    "value": 1480.5,
     "prevValue": 1519.59,
-    "changePct": -2.63
+    "changePct": -2.57
   },
   "companyCount": 4,
   "failedCount": 0,
@@ -28,10 +28,10 @@
       "segment": "AI / Analytics",
       "confidence": "high",
       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
-      "price": 822.0,
+      "price": 823.55,
       "prevClose": 829.35,
-      "changePct": -0.89,
-      "marketCapCr": 14135.5,
+      "changePct": -0.7,
+      "marketCapCr": 14162.2,
       "status": "ok"
     },
     {
@@ -40,10 +40,10 @@
       "segment": "AI-first IT Services",
       "confidence": "borderline",
       "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
-      "price": 434.15,
+      "price": 434.25,
       "prevClose": 436.65,
-      "changePct": -0.57,
-      "marketCapCr": 6523.6,
+      "changePct": -0.55,
+      "marketCapCr": 6525.1,
       "status": "ok"
     },
     {
@@ -52,10 +52,10 @@
       "segment": "AI / Data Analytics",
       "confidence": "borderline",
       "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
-      "price": 279.1,
+      "price": 279.3,
       "prevClose": 278.5,
-      "changePct": 0.22,
-      "marketCapCr": 5775.3,
+      "changePct": 0.29,
+      "marketCapCr": 5779.4,
       "status": "ok"
     }
   ]
