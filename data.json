@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-31T17:11:45.377154+00:00",
+  "generatedAt": "2026-09-01T08:24:00.245747+00:00",
   "index": {
     "baseDate": "2023-04-01",
     "baseValue": 1000.0,
-    "value": 1473.5,
-    "prevValue": 1497.43,
-    "changePct": -1.6
+    "value": 1444.12,
+    "prevValue": 1471.91,
+    "changePct": -1.89
   },
   "companyCount": 4,
   "failedCount": 0,
@@ -16,10 +16,10 @@
       "segment": "AI Infrastructure / HPC",
       "confidence": "borderline",
       "note": "Manufactures AI/HPC computing systems; often called India's only listed 'AI infrastructure pure-play', but the company's own AI-systems product segment was reported at ~43% of revenue (up from 15%) -- just under a clean majority by that narrow measure, though broader AI+HPC+cloud infra framing would exceed 50%.",
-      "price": 5188.6,
-      "prevClose": 5327.0,
-      "changePct": -2.6,
-      "marketCapCr": 29544.2,
+      "price": 5149.0,
+      "prevClose": 5178.0,
+      "changePct": -0.56,
+      "marketCapCr": 29318.8,
       "status": "ok"
     },
     {
@@ -28,22 +28,10 @@
       "segment": "AI / Analytics",
       "confidence": "high",
       "note": "IPO'd Feb 2026, widely reported as India's first pure-play AI listing; core business is AI/analytics consulting and products.",
-      "price": 852.15,
-      "prevClose": 845.0,
-      "changePct": 0.85,
-      "marketCapCr": 14654.0,
-      "status": "ok"
-    },
-    {
-      "symbol": "HAPPSTMNDS",
-      "name": "Happiest Minds Technologies",
-      "segment": "AI-first IT Services",
-      "confidence": "borderline",
-      "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
-      "price": 406.95,
-      "prevClose": 409.6,
-      "changePct": -0.65,
-      "marketCapCr": 6114.9,
+      "price": 838.0,
+      "prevClose": 852.15,
+      "changePct": -1.66,
+      "marketCapCr": 14410.7,
       "status": "ok"
     },
     {
@@ -52,10 +40,22 @@
       "segment": "AI / Data Analytics",
       "confidence": "borderline",
       "note": "Data analytics and consulting firm; company commentary (FY26) cited roughly half of revenue from AI projects -- near the 50% line, not a clean majority.",
-      "price": 269.8,
-      "prevClose": 279.6,
-      "changePct": -3.51,
-      "marketCapCr": 5582.8,
+      "price": 271.85,
+      "prevClose": 269.8,
+      "changePct": 0.76,
+      "marketCapCr": 5625.3,
+      "status": "ok"
+    },
+    {
+      "symbol": "HAPPSTMNDS",
+      "name": "Happiest Minds Technologies",
+      "segment": "AI-first IT Services",
+      "confidence": "borderline",
+      "note": "Self-described 'AI-first' company; ~97% of revenue is from combined digital/cloud/AI-driven services, but that figure bundles AI with cloud and digital transformation rather than isolating AI alone.",
+      "price": 361.15,
+      "prevClose": 406.95,
+      "changePct": -11.25,
+      "marketCapCr": 5426.7,
       "status": "ok"
     }
   ]
